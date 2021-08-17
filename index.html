@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="img/pavicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="css/main_style.css">
+    <title>Play In The Kitchen</title>
+
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="img/logo.png" alt="">
+        </div>
+        <div class="header_bar">
+            <form action="">
+                <input type="text" id="search" placeholder="SEARCH">
+                <label for="search"><a href="">검색</a></label>
+            </form>
+            <div class="navi">
+                <ul>
+                    <li><a href="#">로그인</a></li>
+                    <li><a href="#">회원가입</a></li>
+                    <li><a href="#">장바구니</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="slider">
+            <div class="myslide fade">
+                <img src="img/pc_img_b_1.jpg" alt="">
+            </div>
+            <div class="myslide fade">
+                <img src="img/pc_img_b_2.jpg" alt="">
+            </div>
+            <div class="myslide fade">
+                <img src="img/pc_img_b_3.jpg" alt="">
+            </div>
+            <div class="myslide fade">
+                <img src="img/pc_img_b_4.jpg" alt="">
+            </div>
+            <div class="dotsbox">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+            </div>
+        </div>
+    </header>
+    <div id="menu">
+        <div class="category">
+            <img src="img/c_1.jpg" alt="">
+            <div class="cate_inner">
+                채소
+            </div>
+        </div>
+        <div class="category">
+            <img src="img/c_2.jpg" alt="">
+            <div class="cate_inner">
+                과일
+            </div>
+        </div>
+        <div class="category">
+            <img src="img/c_3.jpg" alt="">
+            <div class="cate_inner">
+                정육
+            </div>
+        </div>
+        <div class="category">
+            <img src="img/c_4.jpg" alt="">
+            <div class="cate_inner">
+                메인요리
+            </div>
+        </div>
+        <div class="category">
+            <img src="img/c_5.jpg" alt="">
+            <div class="cate_inner">
+                디저트
+            </div>
+        </div>
+        <div class="category">
+            <img src="img/c_6.jpg" alt="">
+            <div class="cate_inner">
+                간편식
+            </div>
+        </div>
+        <div class="category">
+            <img src="img/c_7.jpg" alt="">
+            <div class="cate_inner">
+                양념
+            </div>
+        </div>
+        <div class="category">
+            <img src="img/c_8.jpg" alt="">
+            <div class="cate_inner">
+                샐러드
+            </div>
+        </div>
+        <!--
+        <a href="#">
+            <p>Category</p>
+        </a>
+        <a href="#">Category</a>
+        <a href="#">Category</a>
+        <a href="#">Category</a>
+        <a href="#">Category</a>
+        <a href="#">Category</a>
+-->
+    </div>
+    <section class="new_product">
+        <h3 class="title_prod">
+            이번 주 새로운 상품
+        </h3>
+        <div class="product_inner">
+            <div class="inner_prod">
+                <div class="inner_img">
+                    <img src="img/c_2-2.jpg" alt="">
+                </div>
+                <div class="inner_title">
+                    <p class="new">새콤달콤 생과일 요거트</p>
+                    <p class="price">4,500원</p>
+                </div>
+            </div>
+            <div class="inner_prod">
+                <div class="inner_img">
+                    <img src="img/c_3-2.jpg" alt="">
+                </div>
+                <div class="inner_title">
+                    <p class="new">집에서 즐기는 훈제연어</p>
+                    <p class="price">19,900원</p>
+                </div>
+            </div>
+            <div class="inner_prod">
+                <div class="inner_img">
+                    <img src="img/c_8-2.jpg" alt="">
+                </div>
+                <div class="inner_title">
+                    <p class="new">입맛을 살려줄 베이컨 샐러드</p>
+                    <p class="price">8,000원</p>
+                </div>
+            </div>
+
+            <div class="inner_prod">
+                <img src="img/c_4-2.jpg" alt="">
+                <div class="inner_title">
+                    <p class="new">여름에 제격 간편 막국수 Kit</p>
+                    <p class="price">9,500원</p>
+                </div>
+            </div>
+
+            <div class="inner_prod">
+                <div class="inner_img">
+                    <img src="img/c_4-1.jpg" alt="">
+                </div>
+                <div class="inner_title">
+                    <p class="new">혼밥도 맛있게, 연어스테이크</p>
+                    <p class="price">12,500원</p>
+                </div>
+            </div>
+            <div class="inner_prod">
+                <div class="inner_img">
+                    <img src="img/c_5-2.jpg" alt="">
+                </div>
+                <div class="inner_title">
+                    <p class="new">수능응원 화이트 초콜릿 &amp; 견과류</p>
+                    <p class="price">9,900원</p>
+                </div>
+            </div>
+            <div class="inner_prod">
+                <div class="inner_img">
+                    <img src="img/c_1-5.jpg" alt="">
+                </div>
+                <div class="inner_title">
+                    <p class="new">쌈채소 모음전</p>
+                    <p class="price">6,000원 ~</p>
+                </div>
+            </div>
+
+            <div class="inner_prod">
+                <img src="img/c_8.jpg" alt="">
+                <div class="inner_title">
+                    <p class="new">맛있는 다이어트 샐러드</p>
+                    <p class="price">8,300원</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section class="fav_product">
+        <h3 class="title_prod">
+            {user.name} 고객님의 고정 PICK! </h3>
+        <div class="product_inner">
+            <div class="inner_prod">
+                <div class="inner_img">
+                    <img src="img/c_1-8.jpg" alt="">
+                </div>
+                <div class="inner_title">
+                    <p>아스파라거스</p>
+                    <p class="price">9,000원</p>
+                </div>
+            </div>
+            <div class="inner_prod">
+                <div class="inner_img">
+                    <img src="img/c_4-1.jpg" alt="">
+                </div>
+                <div class="inner_title">
+                    <p>혼밥도 맛있게, 연어스테이크</p>
+                    <p class="price">12,900원</p>
+                </div>
+            </div>
+            <div class="inner_prod">
+                <div class="inner_img">
+                    <img src="img/c_6-3.jpg" alt="">
+                </div>
+                <div class="inner_title">
+                    <p>단호하게 고른 단호박 피자</p>
+                    <p class="price">13,000원</p>
+                </div>
+            </div>
+
+            <div class="inner_prod">
+                <img src="img/c_5-1.jpg" alt="">
+                <div class="inner_title">
+                    <p>집에서도 분위기, 치즈 플레이팅</p>
+                    <p class="price">9,500원</p>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+    <section class="best_product">
+        <h3 class="title_prod">
+            리뷰가 쏟아지는 인기 상품 </h3>
+        <div class="product_inner">
+            <div class="inner_prod">
+
+                <div class="inner_img">
+                    <img src="img/c_7-1.jpg" alt="">
+                </div>
+                <div class="inner_title">
+                    <p class="fav">혼밥러를 위한 곡물 모음전</p>
+                    <p class="price">6,500원 ~ </p>
+                </div>
+            </div>
+            <div class="inner_prod">
+                <div class="inner_img">
+                    <img src="img/c_5-3.jpg" alt="">
+                </div>
+                <div class="inner_title">
+                    <p class="fav">베리 수플레 팬케이크</p>
+                    <p class="price">12,000원</p>
+                </div>
+            </div>
+            <div class="inner_prod">
+                <div class="inner_img">
+                    <img src="img/c_1-10.jpg" alt="">
+                </div>
+                <div class="inner_title">
+                    <p class="fav">강원도 찹쌀 옥수수</p>
+                    <p class="price">8,700원</p>
+                </div>
+            </div>
+
+            <div class="inner_prod">
+                <img src="img/c_4-3.jpg" alt="">
+                <div class="inner_title">
+                    <p class="fav">계란 치즈 볶음밥</p>
+                    <p class="price">5,500원</p>
+                </div>
+            </div>
+
+            <div class="inner_prod">
+                <img src="img/c_6.jpg" alt="">
+                <div class="inner_title">
+                    <p class="fav">계란말이, 새우김밥</p>
+                    <p class="price">3,500원</p>
+                </div>
+            </div>
+
+            <div class="inner_prod">
+                <img src="img/c_5-5.jpg" alt="">
+                <div class="inner_title">
+                    <p class="fav">와인을 곁들인 베이컨</p>
+                    <p class="price">5,500원</p>
+                </div>
+            </div>
+
+            <div class="inner_prod">
+                <img src="img/c_6-2.jpg" alt="">
+                <div class="inner_title">
+                    <p class="fav">신선한 단백질 샐러드</p>
+                    <p class="price">7,500원</p>
+                </div>
+            </div>
+
+            <div class="inner_prod">
+                <img src="img/c_1-11.jpg" alt="">
+                <div class="inner_title">
+                    <p class="fav">가지가지만들 수 있는 가지</p>
+                    <p class="price">3,500원</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section class="promotion">
+        <h3 class="title_prod">
+            {user.name}을 위한 이벤트 </h3>
+        <div class="promotion_inner">
+            <a href="#"><img src="img/promo_2.jpg"></a>  
+            <a href="#"><img src="img/promo_3.jpg"></a>
+          <a href="#"><img src="img/promo_4.jpg"></a>
+<!--            <a href="#"><img src="https://via.placeholder.com/1200x500" alt="샘플이미지"></a>-->
+            <a href="#"><img src="img/promo_1.jpg"></a>
+        </div>
+    </section>
+    <footer>
+        푸터
+    </footer>
+    <script src="js/jsfile.js"></script>
+</body></html>
