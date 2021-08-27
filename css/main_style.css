@@ -72,17 +72,22 @@ header {
     background: rgba(0, 0, 0, 0.4);
     z-index: 100;
 }
-.headerbar.sticky{
+
+.headerbar.sticky {
     width: 100%;
     position: fixed;
     top: 0;
     height: 40px;
-    background: rgba(0,0,0,0.6);
+    background: rgba(0, 0, 0, 0.6);
     justify-content: flex-end;
+    margin: 0;
+    padding: 0;
 }
+
 .headerbar.sticky form {
-display: none;
+    display: none;
 }
+
 .headerbar form {
     display: flex;
     align-items: center;
@@ -165,7 +170,7 @@ display: none;
     cursor: pointer;
 }
 
-/*화면 width 값을 줄이면 원형이 찌그러짐 해결*/
+/*화면 width 값을 줄이면 원형이 찌그러짐 해결해야함*/
 #menu {
     max-width: 80%;
     height: auto;
@@ -242,7 +247,7 @@ section {
     margin-bottom: 10px;
     padding-bottom: 10px;
     border-bottom: 2px solid var(--green-color);
-    margin: 10px 5% ;
+    margin: 10px 5%;
 }
 
 .product_inner {
@@ -283,7 +288,7 @@ section {
 
 .inner_prod img:hover {
     transform: scale(1.1);
-    transition: transform 0.5s;
+    transition: transform 0.3s ease;
 
 }
 
@@ -302,12 +307,15 @@ section {
 .new:before {
     content: '[신상품]';
     margin-right: 5px;
+    color: blueviolet;
+    font-weight: bold;
 }
 
 .fav:before {
     content: '[인기]';
     margin-right: 5px;
     color: red;
+    font-weight: bold;
 }
 
 .promotion_inner {
@@ -327,22 +335,29 @@ section {
         /*        max-width: 760px;*/
     }
 
-    header {
-        width: 100%;
-        height: auto;
-        overflow: hidden;
-    }
-
-
-    .myslide img {
-        /*        width: 100%;*/
-        max-height: 470px;
-        /*        object-fit: cover;*/
-    }
 
     .headerbar {
         width: 100%;
         height: 60px;
+        font-size: 0.8rem;
+    }
+
+
+    .slider {
+        width: 100%;
+        /*1900px*/
+        height: auto;
+        /*360px*/
+        position: relative;
+        transform: translateY(-7%);
+        overflow: hidden;
+    }
+
+    .myslide {}
+
+    .myslide img {
+        max-width: 1010px;
+        object-fit: cover;
     }
 
     #menu {
@@ -383,6 +398,132 @@ section {
 
     .inner_prod {
         width: 200px;
+        height: 200px;
+        border-radius: 10px;
+        position: relative;
     }
 
+
+    .inner_title {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        margin: 0;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 14px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: rgba(255, 255, 255, 0.6);
+        transform: translateY(200px);
+        transition: transform 0.3s ease;
+    }
+
+    .inner_prod:hover > .inner_title {
+        transform: translateX(0);
+    }
+
+}
+
+@media (max-width:778px) {
+
+    body {
+        width: 778px;
+    }
+
+    .slider {
+        width: 100%;
+        /*1900px*/
+        max-height: 570px;
+        /*360px*/
+        position: relative;
+        transform: translateY(-7%);
+        overflow: hidden;
+    }
+
+    .myslide {}
+
+    .myslide img {
+        max-width: 1010px;
+        object-fit: cover;
+    }
+
+    #menu {
+        max-width: 90%;
+        height: auto;
+        margin: 20px auto;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    #menu .category {
+        width: 80%;
+        height: 100px;
+        margin: 0 auto;
+        border-radius: 0;
+        overflow: hidden;
+        position: relative;
+        box-shadow: 3px 3px 6px #666;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+    }
+
+    #menu .category img {
+        height: 200%;
+        width: auto;
+        border-radius: 100%;
+    }
+
+    #menu .category .cate_inner {
+        position: relative;
+        top: 0;
+        left: 0;
+        background: none;
+        border-radius: 0;
+        text-align: center;
+        font-size: 20px;
+        color: #000;
+        transform: scale(1);
+    }
+
+    #menu .category:hover {
+        box-shadow: none;
+        border: 1px solid #000;
+    }
+
+    #menu .category:hover .cate_inner {
+        text-shadow: 2px 2px 3px #000;
+        color: #fff;
+    }
+
+    .product_inner {
+        width: 75%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0 3%;
+/*        margin-left: 20px;*/
+    }
+
+    .promotion_inner {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 30px auto;
+    }
+    .promotion_inner img{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .promotion_inner img:hover{
+        box-shadow: 10px 10px 10px #ddd;
+    }
 }
